@@ -19,5 +19,7 @@ after_success:
   # Log in docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-s
   # Push images to DockerHub
-  - docker push ayfantis53/multi-client ayfantis53/multi-nginx ayfantis53/multi-server
+  - docker push ayfantis53/multi-client 
+  - docker push ayfantis53/ayfantis53/multi-nginx
+  - docker push ayfantis53/multi-server 
 
