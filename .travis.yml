@@ -13,13 +13,13 @@ script:
 
 # Production images build
 after_success: 
-  - docker build -t ayfantis53/multi-client -f ./client/
-  - docker build -t ayfantis53/multi-nginx -f ./nginx/
-  - docker build -t ayfantis53/multi-server -f ./server/
+  - docker build -t ayfantis53/memories-client ./client
+  - docker build -t ayfantis53/memories-nginx ./nginx
+  - docker build -t ayfantis53/memories-server ./server
   # Log in docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Push images to DockerHub
-  - docker push ayfantis53/multi-client 
-  - docker push ayfantis53/ayfantis53/multi-nginx
-  - docker push ayfantis53/multi-server 
+  - docker push ayfantis53/memories-client 
+  - docker push ayfantis53/memories-nginx
+  - docker push ayfantis53/memories-server 
 
