@@ -1,3 +1,4 @@
+language: generic
 sudo: required
 services:
   - docker
@@ -8,7 +9,7 @@ before_install:
 
 # Tests
 script:
-  - docker run ayfantis53/react-test npm test -- --coverage
+  - docker run -e CI=true ayfantis53/react-test npm test
 
 # Production images build
 after_success: 
