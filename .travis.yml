@@ -17,7 +17,7 @@ after_success:
   - docker build -t ayfantis53/multi-nginx -f ./nginx/
   - docker build -t ayfantis53/multi-server -f ./server/
   # Log in docker CLI
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-s
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Push images to DockerHub
   - docker push ayfantis53/multi-client 
   - docker push ayfantis53/ayfantis53/multi-nginx
