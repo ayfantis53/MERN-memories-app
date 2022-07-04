@@ -1,0 +1,22 @@
+sudo: required
+services:
+  - docker
+
+# Create image to run test
+before_install:
+  - docker build -t ayfantis53/react-test -f ./client/Dockerfile.dev ./client
+
+# Tests
+script:
+  - docker run ayfantis53/react-test npm test -- --coverage
+
+# Production images build
+after_success: 
+  - docker build -t ayfantis53/multi-client -f ./client/
+  - docker build -t ayfantis53/multi-nginx -f ./nginx/
+  - docker build -t ayfantis53/multi-server -f ./server/
+  # Log in docker CLI
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-s
+  # Push images to DockerHub
+  - docker push ayfantis53/multi-client ayfantis53/multi-nginx ayfantis53/multi-server
+
