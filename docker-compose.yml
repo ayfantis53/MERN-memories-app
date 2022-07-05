@@ -7,7 +7,7 @@ services:
   server:
     image: ayfantis53/memories-server
     mem_limit: 128m
-    hostname: server
+    hostname: api
   nginx:
     image: ayfantis53/memories-nginx
     mem_limit: 128m
