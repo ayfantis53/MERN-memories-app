@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-const API = axios.create({ baseURL: 'http://localhost:5000/api' });
+const API = axios.create({ baseURL: 'http://api' });
 
 // Help auth Middleware, happens before each request, used to send token to backend to verify were logged in
 API.interceptors.request.use((req) => {
@@ -24,3 +24,4 @@ export const deletePosts = (id, navigate) => API.delete(`/posts/${id}`);
 export const signIn = (formData) => API.post('/user/signin', formData);
 export const signUp = (formData) => API.post('/user/signup', formData);
 
+// "proxy": "http://localhost:5000",
