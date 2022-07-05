@@ -1,15 +1,15 @@
 version: '3'
 services:
   client:
-    image: ayfantis53/memories-client
+    image: 'ayfantis53/memories-client'
     mem_limit: 128m
     hostname: client
   server:
-    image: ayfantis53/memories-server
+    image: 'ayfantis53/memories-server'
     mem_limit: 128m
     hostname: api
   nginx:
-    image: ayfantis53/memories-nginx
+    image: 'ayfantis53/memories-nginx'
     mem_limit: 128m
     hostname: nginx
     ports:
