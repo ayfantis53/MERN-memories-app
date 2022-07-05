@@ -19,7 +19,7 @@ app.use(cors());                                                                
 app.use('/posts', postRoutes);
 app.use('/user', userRoutes);
 
-const ATLAS_URL = process.env.ATLAS_URL;
+const ATLAS_URL = 'mongodb+srv://ayfantis53:And3flip%23@memories-cluster.7mde2mu.mongodb.net/?retryWrites=true&w=majority';
 const PORT = process.env.PORT || 5000;
 
 mongoose.connect(ATLAS_URL)
