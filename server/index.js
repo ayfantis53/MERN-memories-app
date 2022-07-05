@@ -16,8 +16,8 @@ app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());                                                                                        // NEEDS TO BE ABOVE APP.USE ROUTES
 
-app.use('api/posts', postRoutes);
-app.use('api/user', userRoutes);
+app.use('/posts', postRoutes);
+app.use('/user', userRoutes);
 
 const ATLAS_URL = 'mongodb+srv://ayfantis53:And3flip%23@memories-cluster.7mde2mu.mongodb.net/?retryWrites=true&w=majority';
 const PORT = process.env.PORT || 5000;
