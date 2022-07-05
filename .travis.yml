@@ -23,3 +23,15 @@ after_success:
   - docker push ayfantis53/memories-nginx
   - docker push ayfantis53/memories-server 
 
+  deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "memories"
+  env: "Memories-env"
+  bucket_name: "elasticbeanstalk-us-east-1-583762202529"
+  bucket_path: "memories"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: "$AWS_SECRET_KEY"
+
