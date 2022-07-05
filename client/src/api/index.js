@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-const API = axios.create({ baseURL: 'http://memories-env-1.eba-zphivqvn.us-east-1.elasticbeanstalk.com/api' });
+const API = axios.create({ baseURL: '/api' });
 
 // Help auth Middleware, happens before each request, used to send token to backend to verify were logged in
 API.interceptors.request.use((req) => {

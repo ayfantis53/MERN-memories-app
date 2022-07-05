@@ -27,7 +27,7 @@ deploy:
   provider: elasticbeanstalk
   region: "us-east-1"
   app: "memories"
-  env: "Memories-env-1"
+  env: "Memories-env"
   bucket_name: "elasticbeanstalk-us-east-1-583762202529"
   bucket_path: "memories"
   on:
