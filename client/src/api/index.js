@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-const API = axios.create({ baseURL: 'http://localhost:5000' });
+const API = axios.create({ baseURL: 'http://api' });
 
 // Help auth Middleware, happens before each request, used to send token to backend to verify were logged in
 API.interceptors.request.use((req) => {
