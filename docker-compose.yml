@@ -4,8 +4,6 @@ services:
     image: 'ayfantis53/memories-client'
     mem_limit: 128m
     hostname: client
-    ports:
-      - "3000:3000"
   server:
     image: 'ayfantis53/memories-server'
     mem_limit: 128m
