@@ -13,15 +13,15 @@ script:
 
 # Production images build
 after_success: 
-  - docker build -t ayfantis53/memories-client ./client
-  - docker build -t ayfantis53/memories-nginx ./nginx
-  - docker build -t ayfantis53/memories-server ./server
+  - docker build -t ayfantis53/memories-client ./client1
+  - docker build -t ayfantis53/memories-nginx ./nginx1
+  - docker build -t ayfantis53/memories-server ./server1
   # Log in docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Push images to DockerHub
-  - docker push ayfantis53/memories-client 
-  - docker push ayfantis53/memories-nginx
-  - docker push ayfantis53/memories-server 
+  - docker push ayfantis53/memories-client1 
+  - docker push ayfantis53/memories-nginx1
+  - docker push ayfantis53/memories-server1 
 
 deploy:
   provider: elasticbeanstalk
