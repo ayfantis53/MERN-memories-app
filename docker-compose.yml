@@ -1,7 +1,7 @@
 version: '3'
 services:
   client:
-    image: 'ayfantis53/memories-clien1'
+    image: 'ayfantis53/memories-client1'
     mem_limit: 128m
     hostname: client
   server:
