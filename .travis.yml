@@ -36,3 +36,9 @@ deploy:
   secret_access_key: "$AWS_SECRET_KEY"
   edge: true
 
+  # Set the security group in AWS to listen on ports 5432-6379
+  # Set a bigger EC2 Instance t2-medium
+  # Set environmental variables
+  # Put EC2 Instances Ip address into MongoAtlas DB whitelist
+
+
