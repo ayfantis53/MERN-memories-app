@@ -19,9 +19,9 @@ app.use(cors());                                                                
 app.use('/posts', postRoutes);
 app.use('/user', userRoutes);
 
-const ATLAS_URL = process.env.ATLAS_URL || 'mongodb+srv://ayfantis53:And3flip%23@memories-cluster.7mde2mu.mongodb.net/?retryWrites=true&w=majority';
+const mongoAtlasURL = process.env.ATLAS_URL;
 const PORT = process.env.PORT || 5000;
 
-mongoose.connect(ATLAS_URL)
+mongoose.connect(mongoAtlasURL)
     .then(() => app.listen(PORT, () => { console.log(`Server listening on port ${PORT}`); }))
     .catch((error) => console.log( error.message ));
